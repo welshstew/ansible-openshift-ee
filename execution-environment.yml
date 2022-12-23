@@ -1,0 +1,12 @@
+---
+version: 1
+dependencies:
+  python: requirements.txt
+  galaxy: requirements.yml
+  system: bindep.txt
+additional_build_steps:
+  prepend: |
+                RUN pip3 install --upgrade pip setuptools
+                RUN pip3 install openshift
+  append:
+    - RUN ls -al /

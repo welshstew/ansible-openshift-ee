@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  name: some example playbook
+  connection: local
+
+  roles:
+    - some-example-role
